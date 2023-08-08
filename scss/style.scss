@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap");
+body {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #8691d2;
+}
+.container {
+  max-width: 730px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header {
+  padding: 70px 0 25px 0;
+  @media (max-width: 780px) {
+    padding: 50px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__avatar {
+    width: 170px;
+    height: 150px;
+    border-radius: 5%;
+  }
+  &__name {
+    font-size: 22px;
+    color: white;
+  }
+}
+.contacts {
+  padding: 25px 0;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+  }
+  &__item {
+    width: 100%;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #2c265d;
+    border: 1px solid #862c92;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover {
+      box-shadow: #862c92 4px 4px 4px;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 24px;
+  }
+}
+.donate {
+  animation-name: circle;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @media (max-width: 560px) {
+    animation-name: none;
+  }
+}
+@keyframes circle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
